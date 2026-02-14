@@ -31,9 +31,7 @@ button {
   cursor: pointer;
 }
 
-/*====================================*/
-/*           MOBILE-FIRST             */
-/*====================================*/
+/* ==== MOBILE-FIRST ==== */
 .page-home {
   background: #151515;
 }
@@ -171,9 +169,7 @@ button {
   font-weight: 500;
 }
 
-/*====================================*/
-/*           Versión IPAD             */
-/*====================================*/
+/* ==== Versión IPAD ==== */
 @media (min-width: 48rem) {
   .site-header {
     display: grid;
@@ -235,7 +231,7 @@ button {
     z-index: -1;
   }
   .header-picture img {
-    padding-top: 0; /* anula padding mobile */
+    padding-top: 0;
     max-width: 100%;
     height: 30rem;
     display: block;
@@ -324,9 +320,7 @@ button {
     z-index: 5;
   }
 }
-/*====================================*/
-/*           Versión DESKTOP          */
-/*====================================*/
+/* ==== Versión DESKTOP ==== */
 @media (min-width: 90rem) {
   .page-home {
     padding: 1.5rem 10rem;
@@ -487,9 +481,7 @@ button {
     z-index: 5;
   }
 }
-/*====================================*/
-/*           MOBILE-FIRST             */
-/*====================================*/
+/* ==== MOBILE-FIRST ==== */
 .skills {
   display: block;
   padding: 2rem 1rem;
@@ -661,9 +653,7 @@ button {
   line-height: 1.6rem;
 }
 
-/*====================================*/
-/*           Versión IPAD             */
-/*====================================*/
+/* ==== Versión IPAD ==== */
 @media (min-width: 48rem) {
   .skills {
     display: block;
@@ -760,11 +750,10 @@ button {
     transform: translateY(2.6rem) scaleX(1);
   }
   .projects {
-    width: min(69.375rem, 100% - 4rem); /* 1110px, con padding lateral */
+    width: min(69.375rem, 100% - 4rem);
     margin-inline: auto;
     padding: 2rem 0;
   }
-  /* Header */
   .projects-header {
     margin: 0 auto 2.5rem;
     display: flex;
@@ -775,7 +764,7 @@ button {
   }
   .projects-header,
   .projects-grid {
-    width: min(45rem, 100%); /* 1.5rem izq + 1.5rem der */
+    width: min(45rem, 100%);
     margin-inline: auto;
   }
   .projects-tittle {
@@ -792,7 +781,6 @@ button {
     border-bottom: 0.15rem solid #4EE1A0;
     letter-spacing: 0.2rem;
   }
-  /* Grid fijo como Figma */
   .projects-grid {
     padding: 0;
     display: grid;
@@ -837,7 +825,6 @@ button {
     font-size: 1.125rem;
     word-spacing: 1rem;
   }
-  /* Links debajo */
   .project-links {
     grid-area: links;
     margin-top: 1rem;
@@ -858,11 +845,8 @@ button {
     line-height: 1.6rem;
   }
 }
-/*====================================*/
-/*           Versión DESKTOP          */
-/*====================================*/
+/* ==== Versión DESKTOP ==== */
 @media (min-width: 90rem) {
-  /* ===== SKILLS (SIN CAMBIOS FUNCIONALES) ===== */
   .skills {
     display: block;
     padding: 1rem;
@@ -953,13 +937,11 @@ button {
   .main-orbits span:nth-child(5) {
     transform: translateY(2.6rem) scaleX(1);
   }
-  /* ===== PROJECTS ===== */
   .projects {
-    width: min(69.375rem, 100% - 4rem); /* 1110px */
+    width: min(69.375rem, 100% - 4rem);
     margin-inline: auto;
     padding: 2rem 0;
   }
-  /* header */
   .projects-header {
     display: flex;
     align-items: baseline;
@@ -985,15 +967,14 @@ button {
     font-size: 1rem;
     font-weight: 700;
   }
-  /* grid */
   .projects-grid {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 1.875rem; /* 30px */
+    column-gap: 1.875rem;
     row-gap: 4.5rem;
     padding: 0;
-    justify-items: stretch; /* asegura que cada card estire */
+    justify-items: stretch;
   }
   .project-card {
     position: relative;
@@ -1002,7 +983,6 @@ button {
     width: 100%;
     max-width: none;
   }
-  /* IMPORTANTE: en mobile/ipad usaste display: contents; aquí lo anulamos */
   .project-thumb {
     display: block;
     position: relative;
@@ -1011,7 +991,6 @@ button {
     margin: 0;
     overflow: hidden;
   }
-  /* IMPORTANTE: mismo selector que iPad para machacar el transform */
   .project-thumb > img {
     display: block;
     width: 100%;
@@ -1019,7 +998,7 @@ button {
     height: auto;
     margin: 0;
     padding: 0;
-    transform: none; /* <-- quita el scaleX(0.97) heredado */
+    transform: none;
     transform-origin: initial;
   }
   .project-card h3 {
@@ -1034,7 +1013,6 @@ button {
     font-size: 1.125rem;
     word-spacing: 1rem;
   }
-  /* overlay hover */
   .project-thumb::after {
     content: "";
     position: absolute;
@@ -1098,7 +1076,7 @@ button {
 }
 
 .contact-inner {
-  max-width: 21.4375rem; /* 343px */
+  max-width: 21.4375rem;
   margin: 0 auto;
   position: relative;
   padding-bottom: 3.5rem;
@@ -1137,11 +1115,11 @@ button {
   gap: 2rem;
 }
 
-/* ---------- FORM (mobile) ---------- */
+/* FORM (mobile) */
 .form-field {
   display: flex;
   flex-direction: column;
-  position: relative; /* para error-msg */
+  position: relative;
 }
 
 .form-field label {
@@ -1186,7 +1164,7 @@ button {
   text-align: right;
 }
 
-/* Email validation (muestra error solo cuando hay texto y no estás enfocando) */
+/* Email validation */
 #email:not(:focus):not(:placeholder-shown):invalid {
   border-bottom-color: #ff6f5b;
 }
@@ -1195,7 +1173,7 @@ button {
   display: block;
 }
 
-/* ---------- SUBMIT ---------- */
+/* SUBMIT */
 .btn-submit {
   align-self: flex-end;
   background: transparent;
@@ -1214,13 +1192,12 @@ button {
   padding-bottom: 0.4rem;
 }
 
-/* En móvil no dependas de hover; usa active/focus */
 .btn-submit:active .highlight-name,
 .btn-submit:focus-visible .highlight-name {
   color: #4EE1A0;
 }
 
-/* ---------- ORBITS ---------- */
+/* ORBITS */
 .form-orbits {
   position: absolute;
   top: 29rem;
@@ -1262,7 +1239,7 @@ button {
   transform: translateY(2.6rem) scaleX(1);
 }
 
-/* ---------- FOOTER ---------- */
+/* FOOTER */
 .site-footer {
   background: #242424;
   padding-bottom: 4rem;
@@ -1280,11 +1257,8 @@ button {
   padding-top: 0.3rem;
 }
 
-/*====================================*/
-/*           Versión IPAD             */
-/*====================================*/
+/* ==== Versión IPAD ==== */
 @media (min-width: 48rem) {
-  /* ---------- CONTACT ---------- */
   .contact {
     background: #242424;
     padding: 3.75rem 0 0;
@@ -1339,11 +1313,10 @@ button {
     flex-direction: column;
     gap: 2rem;
   }
-  /* ---------- FORM (iPad) ---------- */
   .form-field {
     display: flex;
     flex-direction: column;
-    position: relative; /* para error-msg */
+    position: relative;
   }
   .form-field label {
     display: block;
@@ -1375,7 +1348,6 @@ button {
   .form-field textarea:focus {
     border-bottom-color: #4EE1A0;
   }
-  /* ---------- EMAIL ERROR ---------- */
   .form-field .error-msg {
     display: none;
     margin: 0.5rem 0 0;
@@ -1384,7 +1356,6 @@ button {
     color: #ff6f5b;
     text-align: right;
   }
-  /* muestra error solo si hay texto y sales del campo */
   #email:not(:focus):not(:placeholder-shown):invalid {
     border-bottom-color: #ff6f5b;
   }
@@ -1409,12 +1380,10 @@ button {
     border-bottom: 0.1rem solid #4EE1A0;
     padding-bottom: 0.4rem;
   }
-  /* iPad puede ser táctil: no dependas de hover */
   .btn-submit:active .highlight-name,
   .btn-submit:focus-visible .highlight-name {
     color: #4EE1A0;
   }
-  /* si el iPad tiene trackpad/ratón, habilita hover real */
 }
 @media (min-width: 48rem) and (hover: hover) and (pointer: fine) {
   .btn-submit:hover .highlight-name {
@@ -1422,7 +1391,7 @@ button {
   }
 }
 @media (min-width: 48rem) {
-  /* ---------- ORBITS ---------- */
+  /* ORBITS */
   .form-orbits {
     position: absolute;
     top: 39rem;
@@ -1457,13 +1426,13 @@ button {
   .form-orbits span:nth-child(5) {
     transform: translateY(2.6rem) scaleX(1);
   }
-  /* ---------- FOOTER ---------- */
+  /* ==== FOOTER ==== */
   .site-footer {
     background: #242424;
     padding: 2.5rem 0 2rem;
   }
   .footer {
-    width: 44.125rem; /* 706px */
+    width: 44.125rem;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -1480,9 +1449,7 @@ button {
     padding-top: 0;
   }
 }
-/*====================================*/
-/*           Versión DESKTOP          */
-/*====================================*/
+/* ==== Versión DESKTOP ==== */
 @media (min-width: 90rem) {
   .contact,
   .site-footer {
@@ -1497,16 +1464,16 @@ button {
     padding: 4rem 0 0;
   }
   .contact-inner {
-    width: min(69.375rem, 100% - 4rem); /* 1110px */
+    width: min(69.375rem, 100% - 4rem);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 27.8125rem; /* 445px */
+    grid-template-columns: 1fr 27.8125rem;
     column-gap: 5rem;
     align-items: start;
     position: relative;
     z-index: 2;
     padding-bottom: 3.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.6); /*Sustituyendo al ::after*/
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   }
   .contact-text {
     text-align: left;
@@ -1598,7 +1565,7 @@ button {
     position: absolute;
     left: 0;
     top: 75%;
-    transform: translate(-59%, -50%); /* se mete hacia fuera a la izq */
+    transform: translate(-59%, -50%);
     width: 35rem;
     height: 5rem;
     overflow: visible;
@@ -1609,12 +1576,11 @@ button {
   .form-orbits span {
     position: absolute;
     inset: 0;
-    border-radius: 50%; /* <- mantiene el look “elipse” */
+    border-radius: 50%;
     border: 2px solid #919191;
     opacity: 0.55;
     transform-origin: 50% 50%;
   }
-  /* Separación vertical + elipse más “abierta” (más Figma) */
   .form-orbits span:nth-child(1) {
     transform: translateY(0rem) scaleX(1.35);
   }

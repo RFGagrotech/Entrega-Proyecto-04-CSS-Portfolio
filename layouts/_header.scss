@@ -1,25 +1,28 @@
 @use "../abstracts" as abs;
-/*====================================*/
-/*           MOBILE-FIRST             */
-/*====================================*/
+
+/* ==== MOBILE-FIRST ==== */
 .page-home {
   background: abs.$black;
 }
+
 .page-home .logo {
   display: flex;
   font-size: 1.5rem;
   justify-content: center;
   padding-top: 1.13rem;
 }
+
 .page-home nav {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
   padding-top: 1rem;
 }
+
 .page-home nav a {
   display: inline-flex;
 }
+
 .header-picture {
   display: flex;
   justify-content: center;
@@ -27,6 +30,7 @@
   position: relative;  
   z-index: 2;          
 }
+
 .header-picture::before {
   content: "";
   position: absolute;
@@ -37,28 +41,32 @@
   height: 130%;
   background: linear-gradient(
     to right,
-    rgba(58, 56, 56, 0.224) 100%,   // parte izquierda más oscura
-    rgba(67, 65, 65, 0.4) 30%,  // transicion
-    rgba(78, 76, 76, 0) 50%   // se vuelve totalmente transparente// se vuelve totalmente transparente
+    rgba(58, 56, 56, 0.224) 100%,   
+    rgba(67, 65, 65, 0.4) 30%,  
+    rgba(78, 76, 76, 0) 50%   
   );
   border-radius: 0.25rem; 
   z-index: -1;            
 }
+
 .header-picture img {
   padding-top: 2rem;
   display: block;
 }
+
 .header-text {
   justify-content: center;
   text-align: center;
   max-width: 40rem;
   padding: 1rem 1rem 2rem 1rem;
 }
+
 .header-text h1 {
   padding-bottom: 1.5rem;
   font-size: 2.5rem;
   font-weight: 500;
 }
+
 .header-text p {
   font-size: 1rem;
   font-weight: 400;
@@ -66,13 +74,16 @@
   color: abs.$text-color;
   line-height: 1.5;
 }
+
 .header-text .btn-contact {
   font-size: 1rem;
   line-height: 2.5;
 }
+
 .header-container {
   position: relative; 
 }
+
 .header-orbits{
   position: absolute;
   top: 3rem;
@@ -84,6 +95,7 @@
   z-index: 0;
   opacity: .45;
 }
+
 .header-orbits span{
   position: absolute;
   inset: 0;               
@@ -92,21 +104,27 @@
   opacity: .55;
   transform-origin: 100% 50%; 
 }
+
 .header-orbits span:nth-child(1){ 
   transform: translateY(0rem)    scaleX(1);    
 }
+
 .header-orbits span:nth-child(2){ 
   transform: translateY(.65rem)  scaleX(1); 
 }
+
 .header-orbits span:nth-child(3){ 
   transform: translateY(1.30rem) scaleX(1); 
 }
+
 .header-orbits span:nth-child(4){ 
   transform: translateY(1.95rem) scaleX(1); 
 }
+
 .header-orbits span:nth-child(5){ 
   transform: translateY(2.60rem) scaleX(1); 
 }
+
 .header-circle {
   position: absolute;
   right: -4rem;      
@@ -118,20 +136,15 @@
   pointer-events: none;
   z-index: 1;  
 }      
+
 .header-container .highlight-name {
   display: inline-block;
   border-bottom: 0.15rem solid abs.$green;
   font-weight: 500;
 }
 
+/* ==== Versión IPAD ==== */
 
-
-
-
-
-/*====================================*/
-/*           Versión IPAD             */
-/*====================================*/
 @media (min-width: 48rem) {
   .site-header {
     display: grid;
@@ -197,16 +210,16 @@
   height: 130%;
   background: linear-gradient(
     to right,
-    rgba(58, 56, 56, 0.224) 100%,   // parte izquierda más oscura
-    rgba(67, 65, 65, 0.4) 30%,  // transicion
-    rgba(78, 76, 76, 0) 50%   // se vuelve totalmente transparente// se vuelve totalmente transparente
+    rgba(58, 56, 56, 0.224) 100%,  
+    rgba(67, 65, 65, 0.4) 30%,  
+    rgba(78, 76, 76, 0) 50%   
   );
   border-radius: 0.25rem; 
   z-index: -1;            
   }
 
   .header-picture img {
-    padding-top: 0;      /* anula padding mobile */
+    padding-top: 0;      
     max-width: 100%;
     height: 30rem;
     display: block;
@@ -229,6 +242,7 @@
     font-weight: 700;
     max-width: 30rem;
   }
+
   .hero-line1,.hero-line2,.hero-line3 {
     display: block;
   }
@@ -296,13 +310,8 @@
   }
 }
 
+/* ==== Versión DESKTOP ==== */
 
-
-
-
-/*====================================*/
-/*           Versión DESKTOP          */
-/*====================================*/
 @media (min-width: 90rem) {
   .page-home {
     padding: 1.5rem 10rem;
@@ -327,7 +336,7 @@
   }
 
   .header-icons {
-    grid-area: icons;              // <-- aquí, en el nav
+    grid-area: icons;             
     display: flex;
     justify-content: flex-end;
     gap: 1.5rem;

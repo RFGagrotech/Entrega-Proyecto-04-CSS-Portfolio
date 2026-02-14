@@ -9,13 +9,15 @@
   position: relative;
   overflow: hidden;
 }
+
 .contact-inner {
-  max-width: 21.4375rem; /* 343px */
+  max-width: 21.4375rem; 
   margin: 0 auto;
   position: relative;
   padding-bottom: 3.5rem;
   z-index: 2;
 }
+
 .contact-inner::after {
   content: "";
   display: block;
@@ -23,32 +25,39 @@
   background: abs.$white;
   margin-top: 5.5rem;
 }
+
 .contact-text {
   text-align: center;
 }
+
 .contact-text h2 {
   margin: 0 0 1.25rem;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 1;
 }
+
 .contact-text p {
   margin: 0 0 3.25rem;
   font-size: 1rem;
   line-height: 1.6;
   color: abs.$white;
 }
+
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-/* ---------- FORM (mobile) ---------- */
+
+/* FORM (mobile) */
+
 .form-field {
   display: flex;
   flex-direction: column;
-  position: relative; /* para error-msg */
+  position: relative; 
 }
+
 .form-field label {
   font-size: 1rem;
   letter-spacing: 0.1em;
@@ -57,6 +66,7 @@
   margin-left: 1rem;
   margin-bottom: -0.5rem;
 }
+
 .form-field input,
 .form-field textarea {
   width: 100%;
@@ -69,14 +79,17 @@
   outline: none;
   transition: border-bottom-color 0.2s ease;
 }
+
 .form-field textarea {
   min-height: 6.5rem;
   resize: vertical;
 }
+
 .form-field input:focus,
 .form-field textarea:focus {
   border-bottom-color: abs.$green;
 }
+
 /* Error message */
 .form-field .error-msg {
   display: none;
@@ -86,14 +99,17 @@
   color: abs.$red;
   text-align: right;
 }
-/* Email validation (muestra error solo cuando hay texto y no estás enfocando) */
+
+/* Email validation */
 #email:not(:focus):not(:placeholder-shown):invalid {
   border-bottom-color: abs.$red;
 }
+
 #email:not(:focus):not(:placeholder-shown):invalid + .error-msg {
   display: block;
 }
-/* ---------- SUBMIT ---------- */
+
+/* SUBMIT */
 .btn-submit {
   align-self: flex-end;
   background: transparent;
@@ -105,17 +121,20 @@
   letter-spacing: 0.14rem;
   color: abs.$white;
 }
+
 .btn-submit .highlight-name {
   display: inline-block;
   border-bottom: 0.1rem solid abs.$green;
   padding-bottom: 0.4rem;
 }
-/* En móvil no dependas de hover; usa active/focus */
+
 .btn-submit:active .highlight-name,
 .btn-submit:focus-visible .highlight-name {
   color: abs.$green;
 }
-/* ---------- ORBITS ---------- */
+
+/* ORBITS */
+
 .form-orbits {
   position: absolute;
   top: 29rem;
@@ -127,6 +146,7 @@
   opacity: 0.45;
   z-index: 1;
 }
+
 .form-orbits span {
   position: absolute;
   inset: 0;
@@ -135,34 +155,35 @@
   opacity: 0.55;
   transform-origin: 50% 50%;
 }
+
 .form-orbits span:nth-child(1) { transform: translateY(0rem)   scaleX(1); }
 .form-orbits span:nth-child(2) { transform: translateY(0.65rem) scaleX(1); }
 .form-orbits span:nth-child(3) { transform: translateY(1.30rem) scaleX(1); }
 .form-orbits span:nth-child(4) { transform: translateY(1.95rem) scaleX(1); }
 .form-orbits span:nth-child(5) { transform: translateY(2.60rem) scaleX(1); }
-/* ---------- FOOTER ---------- */
+
+/* FOOTER */
+
 .site-footer {
   background: abs.$dark;
   padding-bottom: 4rem;
 }
+
 .footer-logo {
   display: block;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 500;
 }
+
 .footer-icons {
   display: block;
   padding-top: 0.3rem;
 }
 
+/* ==== Versión IPAD ==== */
 
-/*====================================*/
-/*           Versión IPAD             */
-/*====================================*/
 @media (min-width: 48rem) {
-
-  /* ---------- CONTACT ---------- */
   .contact {
     background: abs.$dark;
     padding: 3.75rem 0 0;
@@ -224,11 +245,10 @@
     gap: 2rem;
   }
 
-  /* ---------- FORM (iPad) ---------- */
   .form-field {
     display: flex;
     flex-direction: column;
-    position: relative; /* para error-msg */
+    position: relative; 
   }
 
   .form-field label {
@@ -265,7 +285,6 @@
     border-bottom-color: abs.$green;
   }
 
-  /* ---------- EMAIL ERROR ---------- */
   .form-field .error-msg {
     display: none;
     margin: 0.5rem 0 0;
@@ -275,7 +294,6 @@
     text-align: right;
   }
 
-  /* muestra error solo si hay texto y sales del campo */
   #email:not(:focus):not(:placeholder-shown):invalid {
     border-bottom-color: abs.$red;
   }
@@ -304,20 +322,18 @@
     padding-bottom: 0.4rem;
   }
 
-  /* iPad puede ser táctil: no dependas de hover */
   .btn-submit:active .highlight-name,
   .btn-submit:focus-visible .highlight-name {
     color: abs.$green;
   }
 
-  /* si el iPad tiene trackpad/ratón, habilita hover real */
   @media (hover: hover) and (pointer: fine) {
     .btn-submit:hover .highlight-name {
       color: abs.$green;
     }
   }
 
-  /* ---------- ORBITS ---------- */
+  /* ORBITS */
   .form-orbits {
     position: absolute;
     top: 39rem;
@@ -345,14 +361,14 @@
   .form-orbits span:nth-child(4) { transform: translateY(1.95rem) scaleX(1); }
   .form-orbits span:nth-child(5) { transform: translateY(2.60rem) scaleX(1); }
 
-  /* ---------- FOOTER ---------- */
+  /* ==== FOOTER ==== */
   .site-footer {
     background: abs.$dark;
     padding: 2.5rem 0 2rem;
   }
 
   .footer {
-    width: 44.125rem; /* 706px */
+    width: 44.125rem; 
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -372,17 +388,8 @@
   }
 }
 
+/* ==== Versión DESKTOP ==== */
 
-
-
-
-
-
-
-
-/*====================================*/
-/*           Versión DESKTOP          */
-/*====================================*/
 @media (min-width: 90rem) {
   .contact,
   .site-footer{
@@ -399,16 +406,16 @@
   }
 
   .contact-inner{
-    width: min(69.375rem, calc(100% - 4rem)); /* 1110px */
+    width: min(69.375rem, calc(100% - 4rem)); 
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 27.8125rem; /* 445px */
+    grid-template-columns: 1fr 27.8125rem; 
     column-gap: 5rem;
     align-items: start;
     position: relative;
     z-index: 2;
     padding-bottom: 3.5rem;
-    border-bottom: 1px solid rgba(255,255,255,.6); /*Sustituyendo al ::after*/
+    border-bottom: 1px solid rgba(255,255,255,.6); 
   }
 
   .contact-text{
@@ -468,6 +475,7 @@
     min-height: 5.5rem;
     resize: vertical;
   }
+  
   .form-field input:focus,
   .form-field textarea:focus {
     border-bottom-color: abs.$green;
@@ -515,7 +523,7 @@
     position: absolute;
     left: 0;
     top: 75%;
-    transform: translate(-59%, -50%); /* se mete hacia fuera a la izq */
+    transform: translate(-59%, -50%); 
     width: 35rem;
     height: 5rem;
     overflow: visible;
@@ -527,13 +535,12 @@
   .form-orbits span{
     position: absolute;
     inset: 0;
-    border-radius: 50%;              /* <- mantiene el look “elipse” */
+    border-radius: 50%;             
     border: 2px solid abs.$grey;
     opacity: .55;
     transform-origin: 50% 50%;
   }
 
-    /* Separación vertical + elipse más “abierta” (más Figma) */
   .form-orbits span:nth-child(1){transform: translateY(0rem)    scaleX(1.35);}
   .form-orbits span:nth-child(2){transform: translateY(.8rem)  scaleX(1.35);}
   .form-orbits span:nth-child(3){transform: translateY(1.6rem)  scaleX(1.35);}
